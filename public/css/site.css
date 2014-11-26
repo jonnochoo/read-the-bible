@@ -1,0 +1,20 @@
+body {  
+  background-color: #EFEFEF;
+  color: #1f0909;
+  font-family: 'Lato', sans-serif;
+  padding-top: 50px;
+}
+
+.container {
+  line-height: 1.8em;
+  margin: auto;
+  width: 640px;
+}
+
+a.copyright {
+  color: #EDEDED;
+}
+
+.chapter-num {
+  display: none;
+}
