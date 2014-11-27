@@ -1,6 +1,7 @@
 var express = require('express');
 var request = require('request');
 var path = require('path');
+var bodyParser = require('body-parser')
 
 var port = process.env.PORT || 5000;
 
@@ -8,10 +9,16 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-  res.send('OK');
+  res.render('home');
+});
+
+app.post('/', function (req, res) {  
+  var uri = '/' + req.body.search.trim().replace(' ', '+');
+  res.redirect(uri);
 });
 
 app.get('/:verse', function (req, res) {

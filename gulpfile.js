@@ -8,7 +8,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('develop', function () {
-  nodemon({ script: 'app.js', ext: 'html js', ignore: ['ignored.js'] })
+  nodemon({ script: 'app.js', ext: 'html js jade', ignore: ['ignored.js'] })
       .on('change', [])
       .on('restart', function () {
         console.log('restarted!')
