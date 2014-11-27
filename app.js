@@ -3,7 +3,7 @@ var request = require('request');
 var path = require('path');
 
 var config = {
-  port: process.env.PORT | 3000
+  port: process.env.PORT | 5000
 };
 
 var app = express();
@@ -11,6 +11,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', function (req, res) {
+  res.send('OK');
+});
 
 app.get('/:verse', function (req, res) {
 
