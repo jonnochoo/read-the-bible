@@ -2,9 +2,7 @@ var express = require('express');
 var request = require('request');
 var path = require('path');
 
-var config = {
-  port: process.env.PORT | 5000
-};
+var port = process.env.PORT || 5000;
 
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +25,6 @@ app.get('/:verse', function (req, res) {
     
 });
 
-app.listen(config.port, function(){
-  console.log('Express server listening on port ' + config.port);
+app.listen(port, function(){
+  console.log('Express server listening on port ' + port);
 });
