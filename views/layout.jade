@@ -2,8 +2,12 @@ html
   head
     title Read The Bible
     meta(charset="utf-8")
-    meta(name='viewport' content='width=device-width', initial-scale='1.0')
+    meta(name='viewport', content='width=device-width', initial-scale='1.0')
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.min.css')
     link(rel='stylesheet', href='/css/site.css')
     link(href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css')
   body
-    block content
+    .row
+      .columns.large-12
+        block content

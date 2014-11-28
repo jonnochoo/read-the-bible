@@ -1,26 +1,23 @@
-body {  
+body {
   background-color: #EFEFEF;
   color: #1f0909;
-  font-family: 'Lato', sans-serif;
-  padding-top: 50px;
+  padding-top: 50px; 
 }
 
-.container {
-  line-height: 1.8em;
-  margin: auto;
-  width: 640px;
+.row{
+  width: 600px;
 }
 
 a.copyright {
-  color: #EDEDED;
+  color: #EDEDED; 
 }
 
 .chapter-num {
-  display: none;
+  display: none; 
 }
 
 input {
   font-size: 20px;
   padding: 10px;
-  width: 100%;
+  width: 100%; 
 }
