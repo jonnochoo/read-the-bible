@@ -18,3 +18,7 @@ a.copyright {
 .chapter-num {
   display: none; 
 }
+
+#searchControl input {
+  margin: 0;
+}
