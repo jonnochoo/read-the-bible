@@ -7,8 +7,7 @@ body {
 @media screen and (min-width: 800px){
 .row {
     width: 600px;
-    padding-top: 50px; 
-    font-family: 'Lato';
+    padding-top: 50px;
   }
 }
 
