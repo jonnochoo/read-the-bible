@@ -1,13 +1,13 @@
 body {
   background-color: #EFEFEF;
   color: #1f0909;
-  font-family: 'Roboto';
+  font-family: 'Lato';
 }
 
 @media screen and (min-width: 800px){
 .row {
     width: 600px;
-    padding-top: 50px;
+    padding-top: 50px; 
   }
 }
 
