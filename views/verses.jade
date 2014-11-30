@@ -6,17 +6,17 @@ block content
     include searchControl
   p!= html
 
-  block scripts    
-    script(type='text/javascript', src='/js/keypress.js')
-    script(type='text/javascript').
-      $(document).foundation('reveal', {
-        opened: function(event){
-          $(event.target).find("input").first().focus();
-        }
-      });
+block scripts    
+  script(type='text/javascript', src='/js/keypress.js')
+  script(type='text/javascript').
+    $(document).foundation('reveal', {
+      opened: function(event){
+        $(event.target).find("input").first().focus();
+      }
+    });
 
-      var listener = new window.keypress.Listener();
-      listener.simple_combo("/", function() {
-        $(document).foundation('reveal', { animation: 'fade' });
-        $('#searchControl').foundation('reveal', 'open');        
-      });
+    var listener = new window.keypress.Listener();
+    listener.simple_combo("/", function() {
+      $(document).foundation('reveal', { animation: 'fade' });
+      $('#searchControl').foundation('reveal', 'open');        
+    });
