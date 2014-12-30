@@ -3,7 +3,8 @@ extends layout
 block content  
 
   div#searchControl.reveal-modal(data-reveal)
-    include searchControl
+    form(method='POST', action='/')
+      input(type='text', id='search' name='search', placeholder='Search for a bible verse...')
   p!= html
 
 block scripts    
