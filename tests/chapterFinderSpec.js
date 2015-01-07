@@ -27,6 +27,14 @@ describe("ChapterFinder", function() {
     
   });
 
+  it("expects getNextChapter('Jude', 1) to return 'Revelation 1'", function() {
+
+    var actual = chapterFinder.getNextChapter("Jude", 1);
+    expect(actual.book).toBe("Revelation");
+    expect(actual.chapter).toBe(1);
+    
+  });
+
   it("expects getNextChapter('Revelation', 22) to return 'null'", function() {
 
     var actual = chapterFinder.getNextChapter("Revelation", 22);
@@ -62,6 +70,22 @@ describe("ChapterFinder", function() {
 
     var actual = chapterFinder.getPreviousChapter("Genesis", 2);
     expect(actual.book).toBe("Genesis");
+    expect(actual.chapter).toBe(1);
+    
+  });
+
+  it("expects getPreviousChapter('1 Corinthians', 1) to return 'Romans 16'", function() {
+
+    var actual = chapterFinder.getPreviousChapter("1 Corinthians", 1);
+    expect(actual.book).toBe("Romans");
+    expect(actual.chapter).toBe(16);
+    
+  });
+
+  it("expects getPreviousChapter('Revelation', 1) to return 'Jude 1'", function() {
+
+    var actual = chapterFinder.getPreviousChapter("Revelation", 1);
+    expect(actual.book).toBe("Jude");
     expect(actual.chapter).toBe(1);
     
   });
