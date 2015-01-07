@@ -14,12 +14,14 @@
     "gulp-minify-css": "^0.3.11",
     "gulp-nodemon": "^1.0.4",
     "gulp-sass": "^1.2.4",
-    "gulp-watch": "^1.0.7"
+    "gulp-watch": "^1.0.7",
+    "jasmine-node": "^1.14.5"
   },
   "dependencies": {
     "body-parser": "^1.9.3",
     "express": "^4.10.2",
     "jade": "^1.7.0",
+    "lodash": "^2.4.1",
     "request": "^2.48.0"
   }
 }
