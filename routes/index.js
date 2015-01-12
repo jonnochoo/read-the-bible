@@ -1,5 +1,6 @@
 var request = require('request');
 var express = require('express');
+var chapterFinder = require('../lib/chapterFinder');
 var router = express.Router();
 
 router.get('/', function (req, res) {
