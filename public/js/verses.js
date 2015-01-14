@@ -3,7 +3,7 @@ $(document).foundation('reveal', {
         $(event.target).find("input").first().focus();
       }
     });
-
+$(".verse-num").addClass("hide");
 var listener = new window.keypress.Listener();
 listener.simple_combo("/", function() {
   $(document).foundation('reveal', { animation: 'fade' });
@@ -14,4 +14,7 @@ listener.simple_combo("left", function() {
 });
 listener.simple_combo("right", function() {
   window.location = $("#nextChapter").attr('href');
+});
+listener.simple_combo("v", function() {
+  $(".verse-num").toggleClass("hide");
 });

@@ -24,7 +24,7 @@ router.get('/:verse', function (req, res) {
   var previousChapter = chapterFinder.getPreviousChapter(verseInfo.book, chapter);
   var previousChapterUri = previousChapter.book.replace(' ', '+') + '+' + previousChapter.chapter;
 
-  var url = 'http://www.esvapi.org/v2/rest/passageQuery?key=IP&include-audio-link=0&include-first-verse-numbers=0&include-verse-numbers=0&include-headings=0&include-footnotes=0&include-short-copyright=0&passage=' + verse;
+  var url = 'http://www.esvapi.org/v2/rest/passageQuery?key=IP&include-audio-link=0&include-first-verse-numbers=0&include-verse-numbers=1&include-headings=0&include-footnotes=0&include-short-copyright=0&passage=' + verse;
 
   request.get(url, function(err, response, data){
     res.render('verses', { html: data, nextChapterUri: nextChapterUri, previousChapterUri: previousChapterUri });
