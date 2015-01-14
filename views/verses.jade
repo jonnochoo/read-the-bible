@@ -6,9 +6,9 @@ block content
     form(method='POST', action='/')
       input(type='text', id='search' name='search', placeholder='Search for a bible verse...')
   
-  a#previousChapter(href="#").hide
+  a#previousChapter(href="#{previousChapterUri}").hide
   p!= html
-  a#nextChapter(href="#").hide
+  a#nextChapter(href="#{nextChapterUri}").hide
 
 block scripts    
   script(type='text/javascript', src='/js/keypress.js')
