@@ -17,7 +17,7 @@
   { "book": "Nehemiah", "numberOfChapters" : 13 },
   { "book": "Esther", "numberOfChapters" : 10 },
   { "book": "Job", "numberOfChapters" : 42 },
-  { "book": "Psalms", "numberOfChapters" : 150 },
+  { "book": "Psalm", "numberOfChapters" : 150 },
   { "book": "Proverbs", "numberOfChapters" : 31 },
   { "book": "Ecclesiastes", "numberOfChapters" : 12 },
   { "book": "Song of Songs", "numberOfChapters" : 8 },
