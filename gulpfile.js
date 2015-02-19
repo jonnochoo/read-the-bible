@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var minifycss = require('gulp-minify-css');
-var minifycss = require('gulp-minify-css');
 var nodemon = require('gulp-nodemon');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
