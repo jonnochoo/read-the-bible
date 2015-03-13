@@ -20,9 +20,9 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task('develop', function () {
-  nodemon({ script: 'app.js', ext: 'html js jade', ignore: ['ignored.js'] })
-      .on('change', [])
+gulp.task('dev', function () {
+  nodemon({ script: 'app.js', ext: 'html js jade scss', ignore: ['ignored.js'] })
+      .on('change', ['sass'])
       .on('restart', function () {
         console.log('restarted!')
       })
