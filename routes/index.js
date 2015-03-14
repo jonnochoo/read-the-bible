@@ -5,10 +5,6 @@ var chapterFinder = require('../lib/chapterFinder');
 
 var router = express.Router();
 
-router.get('/', function (req, res) {
-  res.render('search');
-});
-
 router.post('/', function (req, res) {  
   var info = verseQueryParser.parse(req.body.search.trim());
   var uri = '/' + info.book.replace(' ', '+') + '+' + info.chapter + (info.verse ? (':' + info.verse) : '' );  
@@ -30,5 +26,10 @@ router.get('/:verse', function (req, res) {
     res.render('verses', { html: data, nextChapterUri: nextChapterUri, previousChapterUri: previousChapterUri });
   });
 });
+
+router.get('/', function (req, res) {
+  res.render('search');
+});
+
 
 module.exports = router;
