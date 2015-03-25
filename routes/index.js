@@ -11,9 +11,14 @@ router.post('/', function (req, res) {
   res.redirect(uri);
 });
 
-router.get('/:verse', function (req, res) {
+router.get('/:verse', function (req, res, next) {
+  
   var verse = req.params.verse;
   var verseInfo = verseQueryParser.parse(verse);
+  if(verseInfo == null) {
+    return next(new Error('The verse could not be found ' + verse));
+  }
+
   var chapter = parseInt(verseInfo.chapter);
   var nextChapter = chapterFinder.getNextChapter(verseInfo.book, chapter);
   var nextChapterUri = nextChapter.book.replace(' ', '+') + '+' + nextChapter.chapter;

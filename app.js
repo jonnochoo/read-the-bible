@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser')
 var indexRoute = require('./routes/index.js');
+var favicon = require('express-favicon');
 
 var port = process.env.PORT || 5000;
 
@@ -11,6 +12,8 @@ app.set("view engine", "jade");
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use('/', indexRoute);
 
 app.listen(port, function(){
